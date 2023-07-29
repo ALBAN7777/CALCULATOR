@@ -6,20 +6,29 @@ def multiply(a, b):
     return a * b
 def divide(a, b):
     return a / b
-a=int(input("Enter a="))
-b=int(input("Enter b="))
-option=input("Enter option=")
-if option == 'add':
-    c = add(a, b)
-    print(c)
-elif option == 'subtract':
-    c = subtract(a, b)
-    print(c)
-elif option == 'multiply':
-    c = multiply(a, b)
-    print(c)
-elif option == 'divide':
-    c = divide(a, b)
-    print(c)
-else:
-    print("ERROR: Invalid option")
+    
+while True:
+    a = input("Enter a (or 'q' to quit): ")
+    if a == 'q':
+        break
+
+    b = float(input("Enter b: "))
+    option = input("Enter option : ")
+
+    if option == 'add':
+        c = add(float(a), b)
+        print(c)
+    elif option == 'subtract':
+        c = subtract(float(a), b)
+        print(c)
+    elif option == 'multiply':
+        c = multiply(float(a), b)
+        print(c)
+    elif option == 'divide':
+        c = divide(float(a), b)
+        print(c)
+    else:
+        print("ERROR: Invalid option")
+
+
+
